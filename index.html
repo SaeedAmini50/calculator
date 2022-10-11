@@ -1,0 +1,299 @@
+<DOCTYPE!>
+<html>
+<head>
+<style type="text/css">
+input{width:100%;height:100%;font-size:20px;}
+input{background-repeat:no-repeat;background-size:180px 170px;background-color:rgb(176,176,176);}
+input:hover{font-size:27px;color:white;background-color:rgb(0,0,0);transition:0.5s;}
+input{-webkit-transition:all 2s;}
+textarea{width:400px;height:75px;background-color:light blue; }
+body{background-color:rgb(176,176,176);}
+table td{padding:0px;}
+table tr{padding:0px;}
+font{font-size:10px;}
+.buttonred{background-color:rgb(183,23,23);}
+.buttonorenge{background-color:rgb(254,155,7); }
+.borderdivtxttt{border:5px outset rgb(183,23,23) }	
+.whiteBlack{
+	background: black;	border:3px white solid;
+}
+.whiteBlack table{border:3px white solid;}
+.whiteBlack div{border:3px white solid;}
+.whiteBlack input{
+
+background-color:white;}
+.whiteBlack .buttonred{color:red;}
+.whiteBlack .buttonorenge{color:rgb(254,155,7)}
+.whiteBlack input:hover{
+
+font-size:27px;color:white;background-color:black;
+
+}
+.photo{	background: rgb(176,176,176); 
+	.buttonred{background-color:rgb(183,23,230);}
+}
+ 
+textarea{
+	resize: none;
+	outline: none;
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+<select style="background-color:rgb(130,130,130);" name="File">
+
+
+
+<audio  src="a.mp3"></audio>
+
+
+
+<caption>Settings</caption>
+<Option>File</Option> 
+<Option>Exit</Option> 
+<Option>LogOut</Option> 
+<select>
+<label>|</label>
+<select style="background-color:rgb(130,130,130)" onclick="document.body.setAttribute('class',this.value)" name="design;">
+<Option>design</Option>
+<Option value="photo">photo</Option> 
+<Option value="whiteBlack">whiteBlack</Option> 
+</select>
+
+<div    style="display:inline;position:absolute;top:20px;left:400px;" >
+<textarea readonly id="txt" name="txt" align="center" style="border:4px solid black;height:130px;font-size:40px;background-color:black;color:white;"
+placeholder="welcome"></textarea>
+<br>
+
+<!--<textarea id="txtt" readonly name="txtt" align="center" style="border:4px solid black;height:60px;font-size:30px;background-color:black;color:white;"  placeholder="your result "></textarea>-->
+
+<form >
+<table    style="background-color:black"  width="400px" height="450px">
+<tr>
+<td style="padding:0px;">
+<input type="button" value="C" id="clear"  class="buttonred"  onclick="clearr()">
+</td>
+
+<td>
+<input   class="buttonorenge" type="button" value="/" id="division"  onclick=" divisionn()">
+</td>
+
+<td>
+<input   class="buttonorenge" type="button" value="x" id="multiplication"  onclick="multiplicationn()">
+</td>
+
+<td>
+<input   class="buttonred" type="button" value=&larr; id="back"  onclick="backk()">
+</td>
+</tr>
+<tr>
+<td style="padding:0px;">
+<input type="button" value="1" id="one"  onclick="onee()">
+</td>
+<td>
+<input  style="margin-right:0;" type="button" value="2" id="two"  onclick="twoo()">
+</td>
+<td>
+<input style="width:100%;height:100%" type="button" value="3" id="three"  onclick="threee()">
+</td>
+
+<td>
+<input class="buttonorenge" type="button" value="." id="dot"  onclick="dott()">
+</td>
+</tr>
+
+<tr>
+
+<td>
+<input type="button" value="4" id="four"  onclick="fourr()">
+</td>
+<td>
+<input type="button" value="5" id="five"  onclick="fivee()">
+</td>
+<td>
+<input type="button" value="6" id="six"  onclick="sixx()">
+</td>
+<td>
+<input   class="buttonorenge" type="button" value="- " id="negative"  onclick="negativee()">
+</td>
+
+</tr>
+<tr>
+
+<td>
+<input type="button" value="7" id="seven"  onclick="sevenn()">
+</td>
+<td>
+<input type="button" value="8" id="eight"  onclick="eightt()">
+</td>
+<td>
+<input type="button" value="9" id="nine"  onclick="ninee()">
+</td>
+
+<td>
+<input  class="buttonorenge" type="button" value="+" id="sum"  onclick="summ()">
+</td>
+</tr>
+<tr>
+
+<td>
+<input class="buttonorenge"  type="button" value="(" id="openarc"  onclick="openarcc()">
+</td>
+
+<td>
+<input  type="button" value="0" id="zero" onclick="zeroo()">
+</td>
+
+<td>
+<input  type="button" value=")" id="closearc"  class="buttonorenge" onclick="closearcc()">
+</td>
+
+<td>
+<input  type="button" class="buttonred" value="=" id="equal"    onclick="equall()" >
+</td>
+
+</tr>
+
+</table>
+</form>
+</div>
+
+
+ <div id="txttt" name="txttt" class="borderdivtxttt"
+ style="overflow:scroll;height:630px;font-size:35px;width:250px;background-color:black;color:white;position:absolute;left:800px;top:20px;display:inline;placeholder:'your hestory'">
+ 
+ <form >
+ <ul id="list" >
+ </ul>
+ </form>
+ </div>
+ 
+ <script type="text/JavaScript">
+
+function dott(){
+console.log(document.getElementById("txt").value)
+document.getElementById("txt").value += ".";
+
+}
+function openarcc(){
+document.getElementById("txt").value += "*(";
+}
+function closearcc(){
+document.getElementById("txt").value += ")*";
+}
+function onee(){
+document.getElementById("txt").value +=1;
+}
+function twoo(){
+document.getElementById("txt").value +=2;
+}
+function threee(){
+document.getElementById("txt").value +=3;
+}
+function fourr(){
+document.getElementById("txt").value +=4;
+}
+function fivee(){
+document.getElementById("txt").value +=5;
+}
+function sixx(){
+document.getElementById("txt").value +=6;
+}
+function sevenn(){
+document.getElementById("txt").value +=7;
+}
+function eightt(){
+document.getElementById("txt").value +=8;
+}
+function ninee(){
+document.getElementById("txt").value +=9;
+}
+function zeroo(){
+document.getElementById("txt").value +=0;
+}
+function multiplicationn(){
+document.getElementById("txt").value += "*";
+}
+function negativee(){
+document.getElementById("txt").value += "-";
+}
+function divisionn(){
+document.getElementById("txt").value += "/";
+}
+function summ(){
+document.getElementById("txt").value += "+";
+}
+function clearr(){
+document.getElementById("txt").value= "";
+}
+
+
+
+function backk(){
+let ar = document.getElementById("txt").value;
+document.getElementById("txt").value=+ ar.slice(0,-1);
+}
+
+
+
+function equall(){
+var eq=document.getElementById("txt").value;
+//if(eq.indexOf(")*")){
+//eq.replace(")*",")")
+//}
+
+ parseInt(eq);
+document.getElementById("txt").value=" ";
+document.getElementById("txt").value=eval(eq);
+console.log(eval(eq));
+
+var hestory=document.getElementById("txt").value;
+document.getElementById("txttt").value=eq+"="+hestory;
+
+var newli=document.createElement("li");
+var textli=document.createTextNode(eq+"="+hestory);
+newli.appendChild(textli);
+document.getElementById("list").appendChild(newli);
+
+
+}
+
+
+
+/*
+function neww(){
+
+var eq=document.getElementById("txt").value;
+ parseInt(eq);
+ 
+document.getElementById("txtt").value=" ";
+document.getElementById("txtt").value=eval(eq);
+console.log(eval(eq));
+
+//eval(document.getElementById("txtt").value);
+ }
+ //window.setInterval(neww,10);
+ */
+
+
+//function equalkeyboard(event){alert(event.keyCode)}
+
+function equalkeyboard(event){
+	if(event.keyCode==13){
+		equall();
+	}
+}
+
+
+
+
+
+</script>
+</body>
+</html>
+ 
